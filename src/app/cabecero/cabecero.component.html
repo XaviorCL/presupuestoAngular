@@ -1,0 +1,25 @@
+<div class="cabecero">
+  <div class="presupuesto">
+      <div class="presupuesto_titulo">
+         <p> Presupuesto Disponible:</p>
+      </div>
+
+      <div class="presupuesto_valor">{{presupuestoTotal | currency:'CLP':'$':'1.0'}}</div>
+
+      <div class="presupuesto_ingreso limpiarEstilos">
+          <div class="presupuesto_ingreso--texto">INGRESOS</div>
+          <div class="right">
+              <div class="presupuesto_ingreso--valor">{{ingresoTotal | currency:'CLP':'$':'1.0' }}</div>
+              <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+          </div>
+      </div>
+
+      <div class="presupuesto_egreso limpiarEstilos">
+          <div class="presupuesto_egreso--text">EGRESOS</div>
+          <div class="right limpiarEstilos">
+              <div class="presupuesto_egreso--valor">- {{gastoTotal | currency:'CLP':'$':'1.0' }}</div>
+              <div class="presupuesto_egreso--porcentaje">{{porcentajeTotal | percent}}</div>
+          </div>
+      </div>
+  </div>
+</div>
